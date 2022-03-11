@@ -28,10 +28,5 @@ public class lopen : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
             transform.position += -transform.forward * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.Space))
-            transform.position += new Vector3(0, 5, 0) * Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.LeftControl))
-            transform.position += new Vector3(0, -2, 0) * Time.deltaTime;
     }
 }
