@@ -19,7 +19,7 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool("isWalking", true);
         }
-        if (!Input.GetKey("w"))
+        else
         {
             animator.SetBool("isWalking", false);
         }
