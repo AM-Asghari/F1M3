@@ -55,17 +55,17 @@ public class Schieten : MonoBehaviour
     {
         readyToShoot = false;
 
-        Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 5f, 0));
+        Ray ray = fpsCam.ViewportPointToRay(new Vector3(1.4f, 0.5f, 0f));
         RaycastHit hit;
 
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
             targetPoint = hit.point;
         else
-            targetPoint = ray.GetPoint(75);
+            targetPoint = ray.GetPoint(0);
 
         Vector3 directionwithoutSpread = targetPoint - attackPoint.position;
-
+        Debug.Log(directionwithoutSpread);
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
 
@@ -76,7 +76,7 @@ public class Schieten : MonoBehaviour
         currentBullet.transform.forward = directionWithSpread.normalized;
 
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-        currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
+        //currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
 
         bulletsLeft--;
