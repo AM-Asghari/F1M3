@@ -16,7 +16,7 @@ public class DestroyOnHit : MonoBehaviour
     {
         if (collision.collider.tag == "Bullet")
         {
-            Test(2000);
+            Test(1950);
         }
     }
 }
