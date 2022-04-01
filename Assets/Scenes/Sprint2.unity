@@ -656,7 +656,7 @@ MonoBehaviour:
   spread: 0
   reloadTime: 1.5
   timeBetweenShots: 0
-  magazineSize: 6
+  magazineSize: 4
   bulletsPerTap: 1
   allowButtonHold: 0
   fpsCam: {fileID: 780186720}
